@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_rep"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadeScrollbars="false"
+    android:orientation="vertical"
+    android:scrollbars="vertical"
+    android:scrollbarThumbVertical="@drawable/scrollcolor">
+
+    <TextView
+        android:id="@+id/rdisplay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:background="#FF303347"
+        android:gravity="center"
+        android:text="@string/rHeading"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rOfficesName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/rOfficesName"
+        android:textColor="@android:color/background_light"
+        android:textSize="16sp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rdisplay" />
+
+    <TextView
+        android:id="@+id/rOfficialName"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/rOfficialName"
+        android:textColor="@android:color/background_light"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rOfficesName" />
+
+    <TextView
+        android:id="@+id/rParty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:gravity="start"
+        android:text="@string/rLparty"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintLeft_toRightOf="@+id/rOfficialName"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rOfficesName"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/rimageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginRight="73dp"
+        android:layout_marginTop="2dp"
+        android:background="@android:drawable/screen_background_light_transparent"
+        android:contentDescription="@string/officialImage"
+        android:onClick="openPhotoActivity"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rParty"
+        app:layout_constraintVertical_bias="0.22"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/rAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="17dp"
+        android:text="@string/rLAddress"
+        android:textColor="@android:color/background_light"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rOfficialName" />
+
+    <TextView
+        android:id="@+id/rAddressLines"
+        android:layout_width="250dp"
+        android:layout_height="56dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="17dp"
+        android:text="@string/rAddressLine"
+        android:textColor="@android:color/background_light"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toRightOf="@+id/rAddress"
+        app:layout_constraintRight_toLeftOf="@+id/rimageView"
+        app:layout_constraintTop_toBottomOf="@+id/rOfficialName" />
+
+    <TextView
+        android:id="@+id/rPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/rPhoneL"
+        android:textColor="@android:color/background_light"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rAddressLines" />
+
+    <TextView
+        android:id="@+id/rPhoneLine"
+        android:layout_width="250dp"
+        android:layout_height="21dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/rPhoneline"
+        android:textColor="@android:color/background_light"
+        android:textSize="15sp"
+        app:layout_constraintHorizontal_bias="0.651"
+        app:layout_constraintLeft_toRightOf="@+id/rPhone"
+        app:layout_constraintRight_toLeftOf="@+id/rimageView"
+        app:layout_constraintTop_toBottomOf="@+id/rAddressLines" />
+
+    <TextView
+        android:id="@+id/rEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/rEmail"
+        android:textColor="@android:color/background_light"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rPhoneLine" />
+
+    <TextView
+        android:id="@+id/rEmailLine"
+        android:layout_width="250dp"
+        android:layout_height="21dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/rEmailL"
+        android:textColor="@android:color/background_light"
+        android:textSize="15sp"
+        app:layout_constraintHorizontal_bias="0.695"
+        app:layout_constraintLeft_toRightOf="@+id/rEmail"
+        app:layout_constraintRight_toLeftOf="@+id/rimageView"
+        app:layout_constraintTop_toBottomOf="@+id/rPhoneLine" />
+
+    <TextView
+        android:id="@+id/rWebsite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/rWebsiteL"
+        android:textColor="@android:color/background_light"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rEmailLine" />
+
+    <TextView
+        android:id="@+id/rWebsiteLine"
+        android:layout_width="250dp"
+        android:layout_height="23dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/rwebsite"
+        android:textColor="@android:color/background_light"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toRightOf="@+id/rWebsite"
+        app:layout_constraintRight_toLeftOf="@+id/rimageView"
+        app:layout_constraintTop_toBottomOf="@+id/rEmailLine" />
+
+    <ImageView
+        android:id="@+id/rYouTube"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="22dp"
+        android:contentDescription="@string/rYoutube"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rWebsite"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/youtube" />
+
+    <ImageView
+        android:id="@+id/rGooglePlus"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="26dp"
+        android:contentDescription="@string/rgoogle"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/rYouTube"
+        app:layout_constraintTop_toBottomOf="@+id/rWebsiteLine"
+        app:srcCompat="@drawable/googleplus"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/rFacebook"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="22dp"
+        android:contentDescription="@string/rfacebook"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/rGooglePlus"
+        app:layout_constraintTop_toBottomOf="@+id/rWebsiteLine"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/facebook" />
+
+    <ImageView
+        android:id="@+id/rTwitter"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="22dp"
+        android:contentDescription="@string/rtweet"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/rFacebook"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rWebsiteLine"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/twitter"
+        app:layout_constraintHorizontal_bias="0.49" />
+
+</android.support.constraint.ConstraintLayout>

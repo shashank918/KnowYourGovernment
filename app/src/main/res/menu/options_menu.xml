@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="@string/option_about"
+        app:showAsAction="always"
+        android:icon="@drawable/help"
+        android:id="@+id/about" />
+    <item android:title="@string/search_menu"
+        android:icon="@drawable/location"
+        android:id="@+id/search"
+        android:capitalize="words"
+        app:showAsAction="ifRoom" />
+</menu>
